@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\konrad-band_it\\band-it\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\konrad-band_it\\band-it\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\konrad-band_it\\band-it\\views\\browse_all.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\views\\browse_all.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\konrad-band_it\\band-it\\views\\browse_all.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\views\\browse_all.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\konrad-band_it\\band-it\\band-it.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\band-it.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Band-it\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\MainPage.xaml.cs",
+              "RelativeToolTip": "Band-it\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T12:42:07.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Browse_all.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\Views\\Browse_all.xaml.cs",
+              "RelativeDocumentMoniker": "Band-it\\Views\\Browse_all.xaml.cs",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\Views\\Browse_all.xaml.cs",
+              "RelativeToolTip": "Band-it\\Views\\Browse_all.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T12:42:02.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Browse_all.xaml",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\Views\\Browse_all.xaml",
+              "RelativeDocumentMoniker": "Band-it\\Views\\Browse_all.xaml",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\Views\\Browse_all.xaml",
+              "RelativeToolTip": "Band-it\\Views\\Browse_all.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-13T12:41:59.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Band-it\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\MainPage.xaml",
+              "RelativeToolTip": "Band-it\\MainPage.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-13T12:40:01.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Band-it",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\Band-it.csproj",
+              "RelativeDocumentMoniker": "Band-it\\Band-it.csproj",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Konrad-Band_it\\Band-it\\Band-it.csproj",
+              "RelativeToolTip": "Band-it\\Band-it.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-13T12:39:00.847Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

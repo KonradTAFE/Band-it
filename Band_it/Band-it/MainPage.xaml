@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Band_it.MainPage">
+    <ContentPage.Resources>
+        
+        <Style x:Key="Main_Buttons" TargetType="Button">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#19509D" Offset="0.0" />
+                    <GradientStop Color="#A0A0A4" Offset="1.0" />
+                </LinearGradientBrush>
+            </Setter>
+            <Setter Property ="Margin" Value="10"/>
+            <Setter Property="BackgroundColor" Value="#A0A0A4"/>
+            <Setter Property="LineBreakMode" Value="WordWrap" />
+            <Setter Property="BorderColor" Value="Black"/>
+            <Setter Property="BorderWidth" Value="1"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="MinimumWidthRequest" Value="150"/>
+            <Setter Property="MinimumHeightRequest" Value="150"/>
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+        
+        <Style x:Key="Background_colors" TargetType="VerticalStackLayout">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#19509D" Offset="0.0" />
+                    <GradientStop Color="#000000" Offset="1.0" />
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+
+        <VerticalStackLayout x:Name="Main_screen" 
+                             Style="{StaticResource Background_colors}">
+            <Grid RowDefinitions= "1*, 1*, 1*" ColumnDefinitions="1*, 1*" HorizontalOptions="Center" >
+                <Button x:Name="Track"
+                        Style="{StaticResource Main_Buttons}"
+                        Text="Track Workout" 
+                        Grid.Row="0" 
+                        Grid.Column="0"
+                        Clicked="Track_Clicked"                        
+                        />
+                <Button x:Name="History" Style="{StaticResource Main_Buttons}" Text="Workout History" Grid.Row="0" Grid.Column="1" Clicked="History_Clicked"/>
+                <Button x:Name="All" Style="{StaticResource Main_Buttons}" Text="Browse All" Grid.Row="1" Grid.Column="0" Clicked="All_Exercise_Clicked"/>
+                <Button x:Name="Settings" Style="{StaticResource Main_Buttons}" Text="Settings" Grid.Row="1" Grid.Column="1" Clicked="Settings_Clicked"/>
+                <Button x:Name="Profile" Style="{StaticResource Main_Buttons}" Text="Profile" Grid.Row="2" Grid.Column="0" Clicked="Profile_Clicked"/>
+                <Button x:Name="About" Style="{StaticResource Main_Buttons}" Text="About" Grid.Row="2" Grid.Column="1" Clicked="About_Clicked"/>
+            </Grid>
+            <ListView x:Name="quotesList" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell  />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+       
+    </ScrollView>
+
+</ContentPage>
