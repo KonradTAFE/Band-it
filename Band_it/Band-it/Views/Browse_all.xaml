@@ -3,26 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Band_it.Views.Browse_all"
              Title="Browse_all"
+              Style="{StaticResource Background_colors}"
              >
     <ScrollView>
         <VerticalStackLayout>
+            <Picker x:Name="MusclePicker" BackgroundColor="LightGray" SelectedIndexChanged="MusclePicker_SelectedIndexChanged" SelectedIndex="0"></Picker>
+            <SearchBar x:Name="Searchbar" Placeholder="Search by name..." Text="" BackgroundColor="LightGray" SearchButtonPressed="SearchBar_SearchButtonPressed"></SearchBar>
             <ListView x:Name="All_exercises">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Border StrokeThickness="1" StrokeShape="RoundRectangle 12" Margin="10">
-                            <Grid RowDefinitions="1*, 1*" ColumnDefinitions="1*, 1*, 1*" >
+
+                            <Grid RowDefinitions="1*" ColumnDefinitions="1*, 1*, 1*">
+                                <Button Style="{StaticResource Main_Buttons}" Grid.ColumnSpan="3" Text="{Binding ExerciseName}" HeightRequest="150" CornerRadius="10" Margin="5"/>
                                 <Image Grid.Column="0" Source="{Binding Gif}" MaximumHeightRequest="100" MaximumWidthRequest="100"></Image>
-                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding ExerciseName}"></Label>
-                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding PrimaryMuscle[0]}"></Label>
+                                <Image Grid.Column="2" Source="next.png" MaximumHeightRequest="30" MaximumWidthRequest="30"/>
                             </Grid>
-                            </Border>
+
                         </ViewCell>
-                        
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </VerticalStackLayout>
+
+    </VerticalStackLayout>
     </ScrollView>
 
-</ContentPage>     
+
+</ContentPage>
+

@@ -9,29 +9,37 @@
     FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Home" Icon="dotnet_bot.png">    
+        <Tab Title="Home" Icon="home.png">    
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage" />
         </Tab>
-        <Tab Title="About" Icon="dotnet_bot.png">
-            <ShellContent
-                Title="About"
-                ContentTemplate="{DataTemplate views:About}"
-                Route="About" />
-        </Tab>
-        <Tab Title="Exercise" Icon="dotnet_bot.png">
-            <ShellContent 
-                Title="Exercise"
-                ContentTemplate="{DataTemplate views:Current_exercise}"
-                Route="Exercise_view" />
-        </Tab>
-        <Tab Title="All exercises" Icon="dotnet_bot.png">
+        
+
+        <Tab Title="All exercises" Icon="search.png">
             <ShellContent
                 Title="All Exercises"
                 ContentTemplate="{DataTemplate views:Browse_all}"
                 Route="Browse_all" />
+        </Tab>
+        <Tab Title="Workout History" Icon="calendar.png">
+            <ShellContent
+                Title="History"
+                ContentTemplate="{DataTemplate views:Workout_history}"
+                Route="Workout History" />
+        </Tab>
+        <Tab Title="Settings" Icon="setting.png">
+            <ShellContent 
+                Title="Settings"
+                ContentTemplate="{DataTemplate views:App_settings}"
+                Route="Settings" />
+        </Tab>
+        <Tab Title="About" Icon="about.png">
+            <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate views:About}"
+        Route="About" />
         </Tab>
     </TabBar>
     

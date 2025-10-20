@@ -13,7 +13,7 @@ namespace Band_it.Modules
         public string Id { get; set; }
 
         [JsonProperty("name")]
-        public string ExerciseName { get; set; }
+        public string ExerciseName { get ; set; }
 
         [JsonProperty("gifUrl")]
         public string Gif { get; set; }
@@ -32,6 +32,7 @@ namespace Band_it.Modules
 
         [JsonProperty("instructions")]
         public string[] Description { get; set; }
+
 
         public Exercise() { }
         public Exercise(string id, string name, string gif, string[] primary, string[] bodyPart, string[] secondary, string[] desc) 

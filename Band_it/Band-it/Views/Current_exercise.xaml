@@ -3,11 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Band_it.Views.Current_exercise"
              Title="Current_exercise">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- STACK ORIENTATION STYLE -->
+            <Style TargetType="StackLayout" x:Key="StackStyle">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <!-- PORTRAIT STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Orientation" Value="Vertical" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <!-- HORIZONTAL STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Horizontal">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Orientation" Value="Horizontal" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <!-- GRID ORIENTATION STYLE -->
+            <Style TargetType="Grid" x:Key="GridStyle">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <!-- PORTRAIT STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="RowDefinitions" Value="*,*,*" />
+                                    <Setter Property="ColumnDefinitions" Value="*,*" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <!-- HORIZONTAL STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Horizontal">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="RowDefinitions" Value="*,*" />
+                                    <Setter Property="ColumnDefinitions" Value="*,*,*" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <VerticalStackLayout>
         <HorizontalStackLayout Spacing="200">
             <Button Text="&lt;" MaximumWidthRequest="50"></Button>
         <Label 
-            Text="asdasd"
+            Text="{Binding ExerciseName}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         </HorizontalStackLayout>

@@ -4,6 +4,44 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+
+    <Style x:Key="Background_colors" TargetType="VerticalStackLayout">
+        <Setter Property="Background">
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#19509D" Offset="0.0" />
+                <GradientStop Color="#000000" Offset="1.0" />
+            </LinearGradientBrush>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Exercises_list" TargetType="Button">
+        <Setter Property="Background">
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#19509D" Offset="0.0" />
+                <GradientStop Color="#A0A0A4" Offset="1.0" />
+            </LinearGradientBrush>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Main_Buttons" TargetType="Button">
+        <Setter Property="Background">
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#19509D" Offset="0.0" />
+                <GradientStop Color="#A0A0A4" Offset="1.0" />
+            </LinearGradientBrush>
+        </Setter>
+        <Setter Property ="Margin" Value="10"/>
+        <Setter Property="BackgroundColor" Value="#A0A0A4"/>
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+        <Setter Property="BorderColor" Value="Black"/>
+        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="MinimumWidthRequest" Value="150"/>
+        <Setter Property="MinimumHeightRequest" Value="150"/>
+        <Setter Property="FontSize" Value="Medium"/>
+    </Style>
+
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>

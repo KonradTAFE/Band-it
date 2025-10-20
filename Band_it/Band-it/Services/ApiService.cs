@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Band_it.Modules;
 using Newtonsoft.Json.Linq;
 
+
 namespace Band_it.Services
 {
     class ApiService
@@ -14,7 +15,7 @@ namespace Band_it.Services
         const string baseURL = "https://www.exercisedb.dev/api/v1/equipments/band/exercises?offset=0&limit=100";
 
         //Fetch multiple options of exercises
-        public async Task<List<Exercise>> GetExercises()
+        public async Task<List<Exercise>> GetAllExercises()
         {
             // building request
             HttpClient httpClient = new HttpClient();
@@ -63,6 +64,65 @@ namespace Band_it.Services
             }
 ;
             return symbolResponse.data.ToList();
+        }
+
+        public async Task<List<Exercise>> SearchByName(string name)
+        {
+            HttpClient httpClient = new HttpClient();
+            HttpRequestMessage request = new(HttpMethod.Get, baseURL);
+
+            // sending the request
+            HttpResponseMessage httpResponse = await httpClient.SendAsync(request);
+
+            if (!httpResponse.IsSuccessStatusCode)
+            {
+                //TODO: Add exception 
+            }
+            ;
+
+            //get body response as string (Content)
+            string responseString = await httpResponse.Content.ReadAsStringAsync();
+            // get json string as C# object
+            APISymbolResponse? symbolResponse = JsonConvert.DeserializeObject<APISymbolResponse>(responseString);
+            List<Exercise> exercises = new List<Exercise>();
+            foreach (Exercise exercise in symbolResponse.data)
+            {
+                if (exercise.ExerciseName.Contains(name))
+                {
+                    exercises.Add(exercise);
+                }
+            }
+            return exercises;
+        }
+
+        public async Task<List<Exercise>> SearchByMuscle(string muscle)
+        {
+            HttpClient httpClient = new HttpClient();
+            HttpRequestMessage request = new(HttpMethod.Get, baseURL);
+
+            // sending the request
+            HttpResponseMessage httpResponse = await httpClient.SendAsync(request);
+
+            if (!httpResponse.IsSuccessStatusCode)
+            {
+                //TODO: Add exception 
+            }
+            ;
+
+            //get body response as string (Content)
+            string responseString = await httpResponse.Content.ReadAsStringAsync();
+            // get json string as C# object
+            APISymbolResponse? symbolResponse = JsonConvert.DeserializeObject<APISymbolResponse>(responseString);
+            List<Exercise> exercises = new List<Exercise>();
+            foreach (Exercise exercise in symbolResponse.data)
+            {
+                if (exercise.PrimaryMuscle.Contains(muscle))
+                {
+                    exercises.Add(exercise);
+                }
+            }
+            return exercises;
+
         }
     }
 }

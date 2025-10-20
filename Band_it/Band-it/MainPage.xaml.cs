@@ -28,8 +28,8 @@ namespace Band_it
 
         private async void All_Exercise_Clicked(object sender, EventArgs e)
         {
-            Browse_all _All = new Browse_all();
-            await Navigation.PushModalAsync(_All);
+            //Browse_all _All = new Browse_all();
+            //await Navigation.PushModalAsync(_All);
 
         }
         private void Settings_Clicked(object sender, EventArgs e)
@@ -44,8 +44,7 @@ namespace Band_it
 
         private async void About_Clicked(object sender, EventArgs e)
         {
-            //List<string> quotes = await _quotesAPI.GetQuotes();
-            //quotesList.ItemsSource = quotes;
+
         }
 
     }
