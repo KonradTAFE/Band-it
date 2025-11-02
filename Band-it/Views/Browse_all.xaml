@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Band_it.Views.Browse_all"
+              Style="{StaticResource Background_colors}"
+             >
+    
+        <StackLayout>
+        <Picker x:Name="MusclePicker" BackgroundColor="#A0A0A4" TextColor="Black"  SelectedItem="all" SelectedIndexChanged="MusclePicker_SelectedIndexChanged"></Picker>
+        <SearchBar x:Name="Searchbar" Placeholder="Search by name..." TextColor="Black" Text="" BackgroundColor="#A0A0A4" SearchButtonPressed="SearchBar_SearchButtonPressed"></SearchBar>
+
+        <ListView x:Name="All_exercises" BindingContext="Exercise">
+            <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                    <ViewCell>
+                            <Grid RowDefinitions="1*" ColumnDefinitions="1*, 1*, 1*">
+                            <Button Style="{StaticResource Main_Buttons}" 
+                                    BindingContext="Exercise"
+                                        Grid.ColumnSpan="3" 
+                                        Text="{Binding ExerciseName}" 
+                                        HeightRequest="150" 
+                                        CornerRadius="10" 
+                                        Margin="5" 
+                                        Clicked="Exercise_clicked"/>
+                            <Image Grid.Column="0" 
+                                       Source="{Binding Gif}" 
+                                       MaximumHeightRequest="100" 
+                                       MaximumWidthRequest="100" />
+                            <Image Grid.Column="2" 
+                                   Source="next.png" 
+                                   MaximumHeightRequest="30" 
+                                   MaximumWidthRequest="30"/>
+                            </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+    </StackLayout>
+ 
+
+
+</ContentPage>
+

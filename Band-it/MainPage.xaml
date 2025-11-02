@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="Band_it.MainPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout x:Name="Main_screen" 
+                             Style="{StaticResource Background_colors}">
+            <Label FontSize="30" HorizontalOptions="Center" Text="Welcome to Band-it!"></Label>
+            <Label HorizontalOptions="Center" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='Today is: {0:dd/MM/yyyy}'}" />
+            <Border MaximumWidthRequest="400" Margin="50">
+                <Label x:Name="quote_label" HorizontalOptions="Center" FontAttributes="Italic" Text="Arnold is the best" />
+            </Border>
+            <Button x:Name="Track"
+                        Style="{StaticResource Main_Buttons}"
+                        VerticalOptions="Center"
+                        WidthRequest="300"
+                        Text="Start Workout" 
+                        Grid.Row="0" 
+                        Grid.Column="0"
+                        Clicked="Track_Clicked"                        
+                        />
+            <ListView x:Name="quotesList" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell  />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+       
+    </ScrollView>
+
+</ContentPage>

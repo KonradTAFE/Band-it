@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Band_it.Views.Current_exercise"
+             Style="{StaticResource Background_colors}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- STACK ORIENTATION STYLE -->
+            <Style TargetType="StackLayout" x:Key="StackStyle">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <!-- PORTRAIT STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Orientation" Value="Vertical" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <!-- HORIZONTAL STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Horizontal">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Orientation" Value="Horizontal" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <!-- GRID ORIENTATION STYLE -->
+            <Style TargetType="Grid" x:Key="GridStyle">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <!-- PORTRAIT STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="RowDefinitions" Value="*,*,*" />
+                                    <Setter Property="ColumnDefinitions" Value="*,*" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <!-- HORIZONTAL STACK ORIENTATION STYLE -->
+                            <VisualState x:Name="Horizontal">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="RowDefinitions" Value="*,*" />
+                                    <Setter Property="ColumnDefinitions" Value="*,*,*" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label x:Name="ExerciseName" HorizontalOptions="Center" Text="{Binding ExerciseName}" FontSize="20" Margin="10"></Label>
+        <SwipeView>
+            <SwipeView.RightItems>
+                <SwipeItem x:Name="Description" />
+            </SwipeView.RightItems>
+            <Image x:Name="Gif" Source="{Binding Gif}" MaximumHeightRequest="300" MaximumWidthRequest="300"></Image>
+        </SwipeView>
+        <Label HorizontalOptions="Center">Current Workout</Label>
+
+    </StackLayout>
+</ContentPage>
