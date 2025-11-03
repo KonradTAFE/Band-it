@@ -68,6 +68,7 @@ namespace Band_it.Services
 
         public async Task<List<Exercise>> SearchByName(string name)
         {
+            exerciseList.Clear();
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new(HttpMethod.Get, baseURL);
 
@@ -97,6 +98,7 @@ namespace Band_it.Services
 
         public async Task<List<Exercise>> SearchByMuscle(string muscle)
         {
+            exerciseList.Clear();
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new(HttpMethod.Get, baseURL);
 

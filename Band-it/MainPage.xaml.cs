@@ -16,9 +16,9 @@ namespace Band_it
             InitializeComponent();
         }
 
-        private void Track_Clicked(object sender, EventArgs e)
+        private async void Track_Clicked(object sender, EventArgs e)
         {
-            
+            await Shell.Current.GoToAsync("//track");
         }
 
 

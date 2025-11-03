@@ -65,14 +65,22 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <Label x:Name="ExerciseName" HorizontalOptions="Center" Text="{Binding ExerciseName}" FontSize="20" Margin="10"></Label>
-        <SwipeView>
-            <SwipeView.RightItems>
-                <SwipeItem x:Name="Description" />
-            </SwipeView.RightItems>
+        <Label x:Name="ExerciseName" HorizontalOptions="Center" FontAttributes="Bold" Text="{Binding ExerciseName}" FontSize="30" Margin="10"/>
+        <Label Text="{Binding PrimaryMuscle[0]}" HorizontalOptions="Center" TextColor="white"/>
+        <SwipeView Threshold="350" HeightRequest="400">
+
             <Image x:Name="Gif" Source="{Binding Gif}" MaximumHeightRequest="300" MaximumWidthRequest="300"></Image>
+            <SwipeView.RightItems>
+                <SwipeItemView >
+                    <Label x:Name="Description" HorizontalOptions="Center" TextColor="White" WidthRequest="350" />
+                </SwipeItemView>
+            </SwipeView.RightItems>
+            
+            
+            
+
         </SwipeView>
-        <Label HorizontalOptions="Center">Current Workout</Label>
+        <Label HorizontalOptions="Center" Text="Current Workout" TextColor="white"/>
 
     </StackLayout>
 </ContentPage>

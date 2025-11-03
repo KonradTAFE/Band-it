@@ -9,14 +9,13 @@
         <Picker x:Name="MusclePicker" BackgroundColor="#A0A0A4" TextColor="Black"  SelectedItem="all" SelectedIndexChanged="MusclePicker_SelectedIndexChanged"></Picker>
         <SearchBar x:Name="Searchbar" Placeholder="Search by name..." TextColor="Black" Text="" BackgroundColor="#A0A0A4" SearchButtonPressed="SearchBar_SearchButtonPressed"></SearchBar>
 
-        <ListView x:Name="All_exercises" BindingContext="Exercise">
+        <ListView x:Name="All_exercises">
             <ListView.ItemTemplate>
                     <DataTemplate>
 
                     <ViewCell>
                             <Grid RowDefinitions="1*" ColumnDefinitions="1*, 1*, 1*">
-                            <Button Style="{StaticResource Main_Buttons}" 
-                                    BindingContext="Exercise"
+                            <Button Style="{StaticResource Main_Buttons}"                                     
                                         Grid.ColumnSpan="3" 
                                         Text="{Binding ExerciseName}" 
                                         HeightRequest="150" 

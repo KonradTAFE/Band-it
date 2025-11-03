@@ -8,8 +8,11 @@ namespace Band_it
         public AppShell()
         {
             InitializeComponent();
+
             Routing.RegisterRoute("browse", typeof(Browse_all));
             Routing.RegisterRoute("exercise", typeof(Current_exercise));
+            Routing.RegisterRoute("track", typeof(Track_workout));
+
         }
     }
 }

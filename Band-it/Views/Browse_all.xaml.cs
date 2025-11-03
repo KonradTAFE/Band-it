@@ -16,6 +16,7 @@ public partial class Browse_all : ContentPage
 
     protected override async void OnAppearing()
     {
+        Searchbar.Text = "";
         List<string> muscles = new List<string>();
         All_exercises.ItemsSource = null;
         All_exercises.ItemsSource = await _service.GetAllExercises();
@@ -32,12 +33,13 @@ public partial class Browse_all : ContentPage
         }
         MusclePicker.ItemsSource = muscles;
         MusclePicker.SelectedItem = "all";
+
     }
 
     private async void SearchBar_SearchButtonPressed(object sender, EventArgs e)
     {
         string name = Searchbar.Text;
-
+        MusclePicker.SelectedItem = "all";
         All_exercises.ItemsSource = null;
         All_exercises.ItemsSource = await _service.SearchByName(name);
     }
@@ -60,10 +62,12 @@ public partial class Browse_all : ContentPage
 
     private async void Exercise_clicked(object sender, EventArgs e)
     {
-        if (sender is Button button && button.BindingContext is Exercise exercise)
+            if (sender is Button button && button.BindingContext is Exercise exercise)
         {
-            await Navigation.PushModalAsync(new Current_exercise(exercise));
-            //await Shell.Current.GoToAsync("exercise");
+            var dict = new ShellNavigationQueryParameters {
+                { "Exercise", exercise } };
+            await Shell.Current.GoToAsync("//exercise",dict);
+            //await Shell.Current.GoToAsync(nameof(Current_exercise));
 
         }
 
