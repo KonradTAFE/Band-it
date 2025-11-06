@@ -5,6 +5,12 @@ namespace Band_it.Views;
 public partial class Current_exercise : ContentPage
 {
     private Exercise exercise;
+    private Set set1 = new Set()
+    {
+        Id = 1,
+        Reps = 12,
+        Color = Preferences.Get("set1", "red")
+    };
 
     public Exercise Exercise
     {

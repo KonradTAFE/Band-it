@@ -71,14 +71,12 @@
 
             <Image x:Name="Gif" Source="{Binding Gif}" MaximumHeightRequest="300" MaximumWidthRequest="300"></Image>
             <SwipeView.RightItems>
-                <SwipeItemView >
+                <SwipeItemView>
                     <Label x:Name="Description" HorizontalOptions="Center" TextColor="White" WidthRequest="350" />
                 </SwipeItemView>
             </SwipeView.RightItems>
             
             
-            
-
         </SwipeView>
         <Label HorizontalOptions="Center" Text="Current Workout" TextColor="white"/>
 

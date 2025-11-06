@@ -18,9 +18,7 @@
                         Style="{StaticResource Main_Buttons}"
                         VerticalOptions="Center"
                         WidthRequest="300"
-                        Text="Start Workout" 
-                        Grid.Row="0" 
-                        Grid.Column="0"
+                        Text="Start Workout"
                         Clicked="Track_Clicked"                        
                         />
             <ListView x:Name="quotesList" >

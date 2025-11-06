@@ -5,8 +5,16 @@
              Style="{StaticResource Background_colors}">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Workout tracking"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Margin="10"
+            FontAttributes="Bold"/>
+        <Image Source="body.png" HeightRequest="200" WidthRequest="300" />
+        <HorizontalStackLayout Spacing="50" HorizontalOptions="Center" Margin="10">
+            <Button Style="{StaticResource greyButtons}" x:Name="save_workout" Clicked="saveWorkout_clicked" Text="Save"></Button>
+            <Button Style="{StaticResource greyButtons}" x:Name="add_exercise" Clicked="addExercise_clicked" Text="+"></Button>
+        </HorizontalStackLayout>
+        <ListView x:Name="tracking_exercises"></ListView>
     </VerticalStackLayout>
 </ContentPage>

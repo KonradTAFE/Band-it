@@ -38,8 +38,9 @@ namespace Band_it.Modules
         [JsonProperty("instructions")]
         public string[] Description { get; set; }
 
+
         public Exercise() { }
-        public Exercise(string id, string name, string gif, string[] primary, string[] bodyPart, string[] secondary, string[] desc) 
+        public Exercise(string id, string name, string gif, string[] primary, string[] bodyPart, string[] secondary, string[] desc)
         {
             Id = id;
             ExerciseName = name;

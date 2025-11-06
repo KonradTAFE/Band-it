@@ -39,12 +39,9 @@
         </Tab>
 
         <ShellContent x:Name="exercise_shell" ContentTemplate="{DataTemplate views:Current_exercise}" Route="exercise"/>
-
-
-
-        <ShellContent ContentTemplate="{DataTemplate views:Track_workout}" Route="track" />
-
+        <ShellContent x:Name="track" ContentTemplate="{DataTemplate views:Track_workout}" Route="track" />
 
     </TabBar>
+
 
 </Shell>

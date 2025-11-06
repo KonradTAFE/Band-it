@@ -5,8 +5,61 @@
              Style="{StaticResource Background_colors}">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="General settings"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Margin="10"/>
+        <Border />
+        <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*,*" VerticalOptions="Center">
+            <Label Text="Dark mode" Grid.Column="1" Grid.Row="0" Margin="10"/>
+            <Switch x:Name="dark_mode" Grid.Column="2" Grid.Row="0" IsToggled="False"/>
+            <Label Text="Light mode" Grid.Column="3" Grid.Row="0" Margin="10"/>
+            <Label Text="Kgs" Grid.Column="1" Grid.Row="1" Margin="10"/>
+            <Switch x:Name="kgs_lbs" Grid.Column="2" Grid.Row="1" IsToggled="False" />
+            <Label Text="Lbs" Grid.Column="3" Grid.Row="1" Margin="10"/>
+            <Button x:Name="defaultExerciseSettings" 
+                    Style="{StaticResource greyButtons}"
+                    Text="Default exercise settings" 
+                    Clicked="defaultExerciseSettings_clicked"
+                    Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
+        </Grid>
+        <Border Margin="5"/>
+        <Label 
+            Text="Bands settings"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="10"/>   
+        <Border/>
+        <ListView x:Name="bands_list">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                    <Grid RowDefinitions="1*" ColumnDefinitions="*,*,*,*,*">
+                        <Button x:Name="band_button"
+                                Grid.Column="1"
+                            Grid.ColumnSpan="3" 
+                               BackgroundColor="{Binding Color}"
+                                HeightRequest="50" 
+                                CornerRadius="10" 
+                                Margin="5" />
+                        <Label Grid.Column="1" 
+                               Text="{Binding Color}" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                                />
+                        <Label Grid.Column="2" 
+                               Text="{Binding Resistance}" 
+                              VerticalOptions="Center"
+                               
+                                />
+                        <Image Grid.Column="3" 
+                           Source="next.png" 
+                           MaximumHeightRequest="30" 
+                           MaximumWidthRequest="30"/>
+                    </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>
