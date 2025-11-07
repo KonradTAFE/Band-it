@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Band_it.Views.Track_workout"
-             Style="{StaticResource Background_colors}">
+             Style="{StaticResource Background_colors}"
+             Shell.TabBarIsVisible="True">
     <VerticalStackLayout>
         <Label 
             Text="Workout tracking"

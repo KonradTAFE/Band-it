@@ -33,5 +33,6 @@ public partial class Track_workout : ContentPage
     private async void addExercise_clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("//track/browse");
+        //await Navigation.PushAsync(new Browse_all());
     }
 }

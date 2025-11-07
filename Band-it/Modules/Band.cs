@@ -12,15 +12,6 @@ namespace Band_it.Modules
     {
         public string Color { get; set; }
         public int Resistance { get; set; }
-        //public Color Color => Name?.ToLower() switch
-        //{
-        //    "red" => Colors.Red,
-        //    "orange" => Color.FromRgb(255, 165, 0),
-        //    "black" => Colors.Black,
-        //    "purple" => Color.FromRgb(128, 0, 128),
-        //    "green" => Colors.Green,
-        //    _ => Colors.Gray
-        //};
 
         public Band() { }
         public Band(string color, int resistance)
