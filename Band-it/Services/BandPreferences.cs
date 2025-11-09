@@ -36,6 +36,14 @@ namespace Band_it.Services
             }
         }
 
+        public void AddBand(string color, int resistance)
+        {
+            int index = Preferences.Get("BandCount", 0);
+            Preferences.Set("BandCount", index + 1);
+            Preferences.Set($"Band_{index}_Name", color);
+            Preferences.Set($"Band_{index}_Resistance", resistance);
+        }
+
         public void LoadDefaultBands()
         {
             ObservableCollection<Band> defaults = new ObservableCollection<Band>

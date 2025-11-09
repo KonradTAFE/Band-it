@@ -60,7 +60,9 @@
                            MaximumHeightRequest="30" 
                            MaximumWidthRequest="30"
                                />
-                                <Button ImageSource="bin.png." BackgroundColor="DarkRed" Clicked="bin_clicked" Grid.Column="4"/>
+                                <Button Style="{StaticResource DeleteButton}" 
+                                        Clicked="bin_clicked" 
+                                        Grid.Column="4"/>
                             </Grid>
                           
                                         

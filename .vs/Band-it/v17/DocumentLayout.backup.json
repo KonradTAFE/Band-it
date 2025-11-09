@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\konra\\source\\repos\\Band-it\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\views\\app_settings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\views\\app_settings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\services\\bandpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\services\\bandpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\modules\\band.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\modules\\band.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\views\\app_settings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\views\\app_settings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\views\\add_band.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +23,8 @@
       "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\views\\add_band.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|c:\\users\\konra\\source\\repos\\band-it\\band-it\\views\\app_settings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C6CCCA1-928F-4CF2-B1B4-08BF887776B1}|Band-it\\Band-it.csproj|solutionrelative:band-it\\views\\app_settings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,57 +34,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Band-it\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\MainPage.xaml*",
+              "RelativeToolTip": "Band-it\\MainPage.xaml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-09T07:02:56.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BandPreferences.cs",
-              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Services\\BandPreferences.cs",
-              "RelativeDocumentMoniker": "Band-it\\Services\\BandPreferences.cs",
-              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Services\\BandPreferences.cs*",
-              "RelativeToolTip": "Band-it\\Services\\BandPreferences.cs*",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwDEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T04:52:08.772Z",
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Resources\\Styles\\Styles.xaml",
+              "RelativeDocumentMoniker": "Band-it\\Resources\\Styles\\Styles.xaml",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Resources\\Styles\\Styles.xaml",
+              "RelativeToolTip": "Band-it\\Resources\\Styles\\Styles.xaml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowCIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-09T06:57:15.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Band.cs",
-              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Modules\\Band.cs",
-              "RelativeDocumentMoniker": "Band-it\\Modules\\Band.cs",
-              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Modules\\Band.cs",
-              "RelativeToolTip": "Band-it\\Modules\\Band.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T02:59:31.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "Band-it\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\AppShell.xaml.cs",
-              "RelativeToolTip": "Band-it\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T02:09:02.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\AppShell.xaml",
-              "RelativeDocumentMoniker": "Band-it\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\AppShell.xaml",
-              "RelativeToolTip": "Band-it\\AppShell.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAwCAAAAAfAAAAAAAAAA==",
+              "Title": "App_settings.xaml",
+              "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Views\\App_settings.xaml",
+              "RelativeDocumentMoniker": "Band-it\\Views\\App_settings.xaml",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Views\\App_settings.xaml",
+              "RelativeToolTip": "Band-it\\Views\\App_settings.xaml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-09T02:08:59.702Z"
+              "WhenOpened": "2025-11-09T06:02:59.847Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -98,7 +83,7 @@
               "RelativeDocumentMoniker": "Band-it\\Views\\Add_band.xaml.cs",
               "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Views\\Add_band.xaml.cs",
               "RelativeToolTip": "Band-it\\Views\\Add_band.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwBEAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T13:53:24.024Z",
               "EditorCaption": ""
@@ -118,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "App_settings.xaml.cs",
               "DocumentMoniker": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Views\\App_settings.xaml.cs",
               "RelativeDocumentMoniker": "Band-it\\Views\\App_settings.xaml.cs",
-              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Views\\App_settings.xaml.cs*",
-              "RelativeToolTip": "Band-it\\Views\\App_settings.xaml.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\konra\\source\\repos\\Band-it\\Band-it\\Views\\App_settings.xaml.cs",
+              "RelativeToolTip": "Band-it\\Views\\App_settings.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T09:33:56.27Z",
               "EditorCaption": ""

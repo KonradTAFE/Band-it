@@ -1,9 +1,11 @@
 using System.Threading.Tasks;
+using Band_it.Services;
 
 namespace Band_it.Views;
 
 public partial class Add_band : ContentPage
 {
+    BandPreferences _preferences = new BandPreferences();
     List<string> colors = new List<string>()
     {
         "red",
@@ -22,7 +24,7 @@ public partial class Add_band : ContentPage
     public Add_band()
 	{
 		InitializeComponent();
-        color_picker.ItemsSource = colors;
+        color_picker.ItemsSource = getAvailableBands();
 	}
 
     private async void back_Clicked(object sender, EventArgs e)
@@ -34,12 +36,10 @@ public partial class Add_band : ContentPage
     {
         if (color_picker.SelectedItem != null)
         {
-            int index = Preferences.Get("BandCount", 0);
-            Preferences.Set("BandCount", index + 1);
+
             string color = color_picker.SelectedItem.ToString();
             int resistance = int.Parse(resistance_value.Text);
-            Preferences.Set($"Band_{index}_Name", color);
-            Preferences.Set($"Band_{index}_Resistance", resistance);
+            _preferences.AddBand(color, resistance);
             await Shell.Current.GoToAsync("//settings");
         }
         else
