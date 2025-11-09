@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Band_it.Views.App_settings"
              Style="{StaticResource Background_colors}">
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
         <Label 
             Text="General settings"
             VerticalOptions="Center" 
@@ -34,7 +35,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <SwipeView>
+                   
                                 <Grid RowDefinitions="1*" ColumnDefinitions="*,*,*,*,*">
 
                                     <Button x:Name="band_button"
@@ -59,14 +60,12 @@
                            MaximumHeightRequest="30" 
                            MaximumWidthRequest="30"
                                />
-
-                                </Grid>
-                                <SwipeView.RightItems>
-                                    <SwipeItemView>
-                                        <Button ImageSource="bin.png." BackgroundColor="DarkRed" Clicked="bin_clicked"></Button>
-                                    </SwipeItemView>
-                                </SwipeView.RightItems>
-                            </SwipeView>
+                                <Button ImageSource="bin.png." BackgroundColor="DarkRed" Clicked="bin_clicked" Grid.Column="4"/>
+                            </Grid>
+                          
+                                        
+                          
+              
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -75,4 +74,5 @@
             <Button Style="{StaticResource greyButtons}" x:Name="add_band" Clicked="addBand_Clicked" Text="+" WidthRequest="40"></Button>
         
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

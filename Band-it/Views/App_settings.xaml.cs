@@ -1,16 +1,15 @@
+using System.Collections.ObjectModel;
 using Band_it.Modules;
 
 namespace Band_it.Views;
 
 public partial class App_settings : ContentPage
 {
-    private List<Band> _bands = new List<Band>();
+    private ObservableCollection<Band> _bands = new ObservableCollection<Band>();
     public App_settings()
     {
         InitializeComponent();
-        bands_list.ItemsSource = _bands;
-
-
+        LoadBands();
     }
 
     private void defaultExerciseSettings_clicked(object sender, EventArgs e)
@@ -22,10 +21,11 @@ public partial class App_settings : ContentPage
     {
         base.OnAppearing();
         LoadBands();
-        
+        bands_list.ItemsSource = _bands;
+
     }
 
-    private void LoadBands()
+    public void LoadBands()
     {
         _bands.Clear();
 
@@ -46,23 +46,7 @@ public partial class App_settings : ContentPage
         }
     }
 
-    private void LoadDefaultBands()
-    {
-        List<Band> defaults = new List<Band>
-        {
-            new Band("Red", 10),
-            new Band("Orange", 25),
-            new Band("Black", 40),
-            new Band("Purple", 55),
-            new Band("Green", 70)
-        };
 
-        foreach (Band band in defaults)
-        {
-            _bands.Add(band);
-        }
-        SaveBands();
-    }
 
     private void SaveBands()
     {
@@ -78,13 +62,44 @@ public partial class App_settings : ContentPage
     {
         if(sender is Button button && button.BindingContext is Band band)
         {
+            for (int i = 0; i < Preferences.Get("BandCount", 0); i++)
+            {
+                if (Preferences.Get($"Band_{i}_Name", "") == band.Color
+                    && Preferences.Get($"Band_{i}_Resistance", 0) == band.Resistance)
+                {
+                    Preferences.Remove($"Band_{i}_Name");
+                    Preferences.Remove($"Band_{i}_Resistance");
+                }
+            }
             _bands.Remove(band);
             SaveBands();
+            
         }
+        //bands_list.ItemsSource = _bands;
+
+
     }
 
-    private void addBand_Clicked(object sender, EventArgs e)
+    private async void addBand_Clicked(object sender, EventArgs e)
     {
+        await Navigation.PushAsync(new Add_band());
+    }
 
+    private void LoadDefaultBands()
+    {
+        List<Band> defaults = new List<Band>
+        {
+            new Band("red", 10),
+            new Band("orange", 25),
+            new Band("black", 40),
+            new Band("purple", 55),
+            new Band("green", 70)
+        };
+
+        foreach (Band band in defaults)
+        {
+            _bands.Add(band);
+        }
+        SaveBands();
     }
 }

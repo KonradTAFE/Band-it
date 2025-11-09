@@ -8,7 +8,7 @@ using Microsoft.Maui.Graphics;
 namespace Band_it.Modules
 {
 
-    class Band
+    public class Band
     {
         public string Color { get; set; }
         public int Resistance { get; set; }
