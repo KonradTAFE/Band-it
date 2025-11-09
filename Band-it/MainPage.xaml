@@ -13,12 +13,12 @@
             <Label HorizontalOptions="Center" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='Today is: {0:dd/MM/yyyy}'}" />
             <Border WidthRequest="300" HeightRequest="200">
             <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*" Padding="5" Margin="5">
-                <Label x:Name="quote_label" FontAttributes="Italic" 
+                <Label x:Name="quote_label"  
                        Grid.Column="1" Grid.ColumnSpan="2"
                        Grid.Row="0" Grid.RowSpan="2"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"/>
-                <Label Text="- Arnold Schwarzenegger" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2"/>
+                    <Label Text="- Arnold Schwarzenegger" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" FontAttributes="Italic"/>
             </Grid>
             </Border>
             <Button x:Name="Track"

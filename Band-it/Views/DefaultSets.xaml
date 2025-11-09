@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Band_it.Views.DefaultSets"
+             Style="{StaticResource Background_colors}">
+    <VerticalStackLayout>
+        <Label 
+            Text="Default sets"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ListView x:Name="sets_list">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout>
+                            <Label Text="Set"/>
+                            <Label Text="{Binding Id}"/>
+                            <Label x:Name="repetitions" Text="{Binding x:DataType='Stepper', Source={x:Reference _stepper}, Path=Value}"/>
+                            <Stepper x:Name="_stepper" Increment="1" Value="{Binding Reps}" Minimum="0"/>
+                            <Picker x:Name="band_picker"/>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Style="{StaticResource greyButtons}" x:Name="add_sets" Clicked="addSet_Clicked" Text="+" WidthRequest="40"></Button>
+    </VerticalStackLayout>
+</ContentPage>

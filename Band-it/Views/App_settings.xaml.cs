@@ -14,9 +14,9 @@ public partial class App_settings : ContentPage
         LoadBands();
     }
 
-    private void defaultExerciseSettings_clicked(object sender, EventArgs e)
+    private async void defaultExerciseSettings_clicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new DefaultSets());
     }
 
     protected override void OnAppearing()
