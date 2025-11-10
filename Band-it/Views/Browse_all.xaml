@@ -6,8 +6,8 @@
              >
     
         <StackLayout>
-        <Picker x:Name="MusclePicker" BackgroundColor="#A0A0A4" TextColor="Black"  SelectedItem="all" SelectedIndexChanged="MusclePicker_SelectedIndexChanged"></Picker>
-        <SearchBar x:Name="Searchbar" Placeholder="Search by name..." TextColor="Black" Text="" BackgroundColor="#A0A0A4" SearchButtonPressed="SearchBar_SearchButtonPressed"></SearchBar>
+        <Picker x:Name="MusclePicker" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource Black}"  SelectedItem="all" SelectedIndexChanged="MusclePicker_SelectedIndexChanged"></Picker>
+        <SearchBar x:Name="Searchbar" Placeholder="Search by name..." TextColor="{StaticResource Black}" Text="" BackgroundColor="{StaticResource Secondary}" SearchButtonPressed="SearchBar_SearchButtonPressed"></SearchBar>
 
         <ListView x:Name="All_exercises">
             <ListView.ItemTemplate>

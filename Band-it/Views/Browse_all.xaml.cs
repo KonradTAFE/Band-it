@@ -65,7 +65,9 @@ public partial class Browse_all : ContentPage
             if (sender is Button button && button.BindingContext is Exercise exercise)
         {
             var dict = new ShellNavigationQueryParameters {
-                { "Exercise", exercise } };
+                { "Exercise", exercise },
+                { "Tracking", false }
+            };
             await Shell.Current.GoToAsync("//exercise",dict);
             //await Shell.Current.GoToAsync(nameof(Current_exercise));
 

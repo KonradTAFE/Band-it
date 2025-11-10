@@ -26,6 +26,8 @@
                                 </VisualState.StateTriggers>
                                 <VisualState.Setters>
                                     <Setter Property="Orientation" Value="Horizontal" />
+                                    <Setter Property="HorizontalOptions" Value="Center"/>
+                                    <Setter Property="VerticalOptions" Value="Center"/>
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -64,21 +66,27 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout>
+    <StackLayout Style="{StaticResource StackStyle}">
+        <StackLayout>
         <Label x:Name="ExerciseName" HorizontalOptions="Center" FontAttributes="Bold" Text="{Binding ExerciseName}" FontSize="30" Margin="10"/>
-        <Label Text="{Binding PrimaryMuscle[0]}" HorizontalOptions="Center" TextColor="white"/>
+        <Label Text="{Binding PrimaryMuscle[0]}" HorizontalOptions="Center" TextColor="{StaticResource White}"/>
         <SwipeView Threshold="350" HeightRequest="400">
 
             <Image x:Name="Gif" Source="{Binding Gif}" MaximumHeightRequest="300" MaximumWidthRequest="300"></Image>
             <SwipeView.RightItems>
                 <SwipeItemView>
-                    <Label x:Name="Description" HorizontalOptions="Center" TextColor="White" WidthRequest="350" />
+                    <Label x:Name="Description" HorizontalOptions="Center" TextColor="{StaticResource White}" WidthRequest="350" />
                 </SwipeItemView>
             </SwipeView.RightItems>
-            
-            
-        </SwipeView>
-        <Label HorizontalOptions="Center" Text="Current Workout" TextColor="white"/>
 
+        </SwipeView>
+        </StackLayout>
+        <StackLayout>
+            <Label HorizontalOptions="Center" Text="Current Workout" TextColor="{StaticResource White}"/>
+            <Label HorizontalOptions="Center" Text="COMING SOON!" TextColor="{StaticResource White}"/>
+            <Label HorizontalOptions="Center" Text="Last Workout" TextColor="{StaticResource White}"/>
+            <Label HorizontalOptions="Center" Text="COMING SOON!" TextColor="{StaticResource White}"/>
+        </StackLayout>
     </StackLayout>
+    
 </ContentPage>

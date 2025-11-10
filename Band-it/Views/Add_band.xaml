@@ -7,13 +7,15 @@
         <Label 
             Text="New band"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*">
-            <Label Grid.Column="1" Grid.Row="0" Text="Color"/>
-            <Picker x:Name="color_picker" Grid.Column="2" Grid.Row="0" />
-            <Label Grid.Column="1" Grid.Row="1" Text="Resistance"/>
-            <Label x:Name="resistance_value" Grid.Column="2" Grid.Row="1" Text="{Binding x:DataType='Stepper', Source={x:Reference _stepper}, Path=Value}"/>
-            <Stepper x:Name="_stepper" Grid.Column="2" Grid.Row="1" Increment="5" Value="10" Minimum="0" HorizontalOptions="End"/>
+            HorizontalOptions="Center" 
+            FontSize="20"
+            Margin="10"/>
+        <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*">
+            <Label Grid.Column="1" Grid.Row="0" Text="Color" VerticalOptions="Center"/>
+            <Picker x:Name="color_picker" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0"  />
+            <Label Grid.Column="1" Grid.Row="1" Text="Resistance" VerticalOptions="Center"/>
+            <Label x:Name="resistance_value" Grid.Column="2" Grid.Row="1" Text="{Binding x:DataType='Stepper', Source={x:Reference _stepper}, Path=Value}" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Stepper x:Name="_stepper" Grid.Column="3" Grid.Row="1" Increment="5" Value="10" Minimum="0" HorizontalOptions="End"/>
         </Grid>
         <HorizontalStackLayout HorizontalOptions="Center" Margin="5">
             <Button Style="{StaticResource greyButtons}" x:Name="save" Clicked="save_Clicked" Text="Save" Margin="5"/>

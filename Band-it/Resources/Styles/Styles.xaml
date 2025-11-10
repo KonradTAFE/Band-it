@@ -5,15 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Style x:Key="greyButtons" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="Grey" />
-        <Setter Property="BorderColor" Value="black"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray500}" />
+        <Setter Property="BorderColor" Value="{StaticResource Black}"/>
     </Style>
 
     <Style x:Key="Background_colors" TargetType="VerticalStackLayout">
         <Setter Property="Background">
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#19509D" Offset="0.0" />
-                <GradientStop Color="#000000" Offset="1.0" />
+                <GradientStop Color="{StaticResource Primary}" Offset="0.0" />
+                <GradientStop Color="{StaticResource Black}" Offset="1.0" />
             </LinearGradientBrush>
         </Setter>
     </Style>
@@ -21,15 +21,15 @@
     <Style x:Key="Exercises_list" TargetType="Button">
         <Setter Property="Background">
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#19509D" Offset="0.0" />
-                <GradientStop Color="#A0A0A4" Offset="1.0" />
+                <GradientStop Color="{StaticResource Primary}" Offset="0.0" />
+                <GradientStop Color="{StaticResource Secondary}" Offset="1.0" />
             </LinearGradientBrush>
         </Setter>
     </Style>
 
     <Style x:Key="DeleteButton" TargetType="Button">
         <Setter Property="ImageSource" Value="bin.png"/>
-        <Setter Property="BackgroundColor" Value="DarkRed"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}"/>
         <Setter Property="WidthRequest" Value="40"/>
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="Margin" Value="5"/>
@@ -38,16 +38,16 @@
     <Style x:Key="Main_Buttons" TargetType="Button">
         <Setter Property="Background">
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#19509D" Offset="0.0" />
-                <GradientStop Color="#A0A0A4" Offset="1.0" />
+                <GradientStop Color="{StaticResource Primary}" Offset="0.0" />
+                <GradientStop Color="{StaticResource Secondary}" Offset="1.0" />
             </LinearGradientBrush>
         </Setter>
         <Setter Property ="Margin" Value="10"/>
-        <Setter Property="BackgroundColor" Value="#A0A0A4"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"/>
         <Setter Property="LineBreakMode" Value="WordWrap" />
-        <Setter Property="BorderColor" Value="Black"/>
+        <Setter Property="BorderColor" Value="{StaticResource Black}"/>
         <Setter Property="BorderWidth" Value="1"/>
-        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="TextColor" Value="{StaticResource Black}"/>
         <Setter Property="FontFamily" Value="Arial"/>
         <Setter Property="MinimumWidthRequest" Value="150"/>
         <Setter Property="MinimumHeightRequest" Value="150"/>

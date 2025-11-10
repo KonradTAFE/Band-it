@@ -7,22 +7,32 @@
         <Label 
             Text="Default sets"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <ListView x:Name="sets_list">
+            HorizontalOptions="Center" 
+            FontSize="20"
+            Margin="10"/>
+        <ListView x:Name="sets_list" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <HorizontalStackLayout>
-                            <Label Text="Set"/>
-                            <Label Text="{Binding Id}"/>
-                            <Label x:Name="repetitions" Text="{Binding x:DataType='Stepper', Source={x:Reference _stepper}, Path=Value}"/>
-                            <Stepper x:Name="_stepper" Increment="1" Value="{Binding Reps}" Minimum="0"/>
-                            <Picker x:Name="band_picker"/>
-                        </HorizontalStackLayout>
+                        <Border>
+                            <Grid ColumnDefinitions="*,*,*,*,*,*,*" >
+
+                                <Label Text="Set" Grid.Column="0" HorizontalOptions="End" VerticalOptions="Center"/>
+                                <Label Text="{Binding Id}" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Text="Reps" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center"/>
+                                <Label x:Name="repetitions" VerticalOptions="Center" Text="{Binding x:DataType='Stepper', Source={x:Reference _stepper}, Path=Value}" Grid.Column="3" HorizontalOptions="Center"/>
+                                <Stepper x:Name="_stepper" Increment="1" Value="{Binding Reps}" Minimum="0" WidthRequest="100" Grid.Column="4"/>
+                                <Picker x:Name="band_picker" Grid.Column="6"/>
+                            </Grid>
+                        </Border>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Style="{StaticResource greyButtons}" x:Name="add_sets" Clicked="addSet_Clicked" Text="+" WidthRequest="40"></Button>
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+            <Button Style="{StaticResource greyButtons}" x:Name="add_sets" Margin="10" Clicked="addSet_Clicked" Text="+" WidthRequest="40"></Button>
+            <Button Style="{StaticResource greyButtons}" x:Name="save_defaults" Margin="10" Clicked="save_defaults_Clicked" Text="Save" WidthRequest="60"></Button>
+            <Button Style="{StaticResource DeleteButton}" Clicked="bin_clicked" Margin="10"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

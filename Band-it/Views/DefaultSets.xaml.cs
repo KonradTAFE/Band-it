@@ -5,28 +5,53 @@ namespace Band_it.Views;
 
 public partial class DefaultSets : ContentPage
 {
-	ObservableCollection<Set> sets = new ObservableCollection<Set>()
-	{
-		new Set(1,10, null),
-		new Set(2, 10, null)
+	SetPreferences _preferences = new SetPreferences();
+	BandPreferences _bandPreferences = new BandPreferences();
+	ObservableCollection<Set> _sets = new ObservableCollection<Set>();
+	List<string> colors = new List<string>();
+	
 
-	};
 
-	public DefaultSets()
+    public DefaultSets()
 	{
 		InitializeComponent();
-		sets_list.ItemsSource = sets;
-
+		_sets = _preferences.GetDefault();
+		sets_list.ItemsSource = _sets;
     }
 
     private void addSet_Clicked(object sender, EventArgs e)
     {
-		int index = sets.Count + 1;
+		int index = _sets.Count + 1;
 		int reps = 0;
-		Band band = null;
-		sets.Add(new Set(index, reps, null));
-
+		string color = null;
+		_sets.Add(new Set(index, reps, null));
+		_preferences.AddSet(index, reps, color);
     }
 
+    private void save_defaults_Clicked(object sender, EventArgs e)
+    {
+		_preferences.SaveDefaults(_sets);
+		Shell.Current.GoToAsync("//settings");
+    }
+
+    private void bin_clicked(object sender, EventArgs e)
+    {
+		if (_sets.Count > 0)
+		{
+			_sets.Remove(_sets.Last());
+			_preferences.SaveDefaults(_sets);
+		}
+    }
+
+	private List<string> GetColors()
+	{
+        
+        ObservableCollection<Band> bands = _bandPreferences.GetBands();
+		foreach(Band band in bands)
+		{
+            colors.Add(band.Color);
+        }
+		return colors;
+    }
 
 }

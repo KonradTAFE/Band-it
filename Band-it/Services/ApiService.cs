@@ -36,28 +36,6 @@ namespace Band_it.Services
             APISymbolResponse? symbolResponse = JsonConvert.DeserializeObject<APISymbolResponse>(responseString);
 
 
-           
-
-            //for (int i = 0; i < symbolResponse.data.Count; i++)
-            //{
-            //    Dictionary<string, object> exerciseData = symbolResponse.data[i];
-            //    string id = (string)exerciseData["exerciseId"];
-            //    string name = (string)exerciseData["name"];
-            //    string gif = (string)exerciseData["gifUrl"];
-            //    JArray targetMuscles = (JArray)exerciseData["targetMuscles"];
-            //    string primary = targetMuscles[0].ToString();
-            //    JArray bodyParts = (JArray)exerciseData["bodyParts"];
-            //    string body = bodyParts[0].ToString();
-            //    JArray secondaryMuscles = (JArray)exerciseData["secondaryMuscles"];
-            //    string secondary = secondaryMuscles[0].ToString();
-            //    JArray instructions = (JArray)exerciseData["instructions"];
-            //    string description = instructions.ToString();
-
-            //    Exercise exercise = new Exercise(id, name, gif, primary, body, secondary, description);
-            //    exercises.Add(exercise);
-            //}
-
-
             if (symbolResponse == null)
             {
                 //TODO: Add exception 

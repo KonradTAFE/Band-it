@@ -38,36 +38,33 @@
                    
                                 <Grid RowDefinitions="1*" ColumnDefinitions="*,*,*,*,*">
 
-                                    <Button x:Name="band_button"
-                                Grid.Column="1"
-                            Grid.ColumnSpan="3" 
-                               BackgroundColor="{Binding Color}"
-                                HeightRequest="50" 
-                                CornerRadius="10" 
-                                Margin="5" />
-                                    <Label Grid.Column="1" 
-                               Text="{Binding Color}" 
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center"
+                                <Button x:Name="band_button"
+                                        Grid.Column="1"
+                                        Grid.ColumnSpan="3" 
+                                        BackgroundColor="{Binding Color}"
+                                        HeightRequest="50" 
+                                        CornerRadius="10" 
+                                        Margin="5" />
+                                <Label Grid.Column="1" 
+                                        Text="{Binding Color}" 
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        TextColor="{StaticResource White}"
                                 />
-                                    <Label Grid.Column="2" 
-                               Text="{Binding Resistance}" 
-                              VerticalOptions="Center"
-                               
+                                <Label Grid.Column="2" 
+                                       Text="{Binding Resistance}" 
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource White}"
                                 />
-                                    <Image Grid.Column="3" 
-                           Source="next.png" 
-                           MaximumHeightRequest="30" 
-                           MaximumWidthRequest="30"
+                                <Image Grid.Column="3" 
+                                       Source="next.png" 
+                                       MaximumHeightRequest="30" 
+                                       MaximumWidthRequest="30"
                                />
                                 <Button Style="{StaticResource DeleteButton}" 
                                         Clicked="bin_clicked" 
                                         Grid.Column="4"/>
-                            </Grid>
-                          
-                                        
-                          
-              
+                            </Grid>                          
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

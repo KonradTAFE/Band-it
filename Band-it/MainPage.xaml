@@ -10,14 +10,15 @@
         <VerticalStackLayout x:Name="Main_screen" 
                              Style="{StaticResource Background_colors}">
             <Label FontSize="30" HorizontalOptions="Center" Text="Welcome to Band-it!"></Label>
-            <Label HorizontalOptions="Center" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='Today is: {0:dd/MM/yyyy}'}" />
+            <Label Margin="10" HorizontalOptions="Center" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='Today is: {0:dd/MM/yyyy}'}" />
             <Border WidthRequest="300" HeightRequest="200">
             <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*" Padding="5" Margin="5">
                 <Label x:Name="quote_label"  
                        Grid.Column="1" Grid.ColumnSpan="2"
                        Grid.Row="0" Grid.RowSpan="2"
                        HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
+                       VerticalOptions="Center"
+                       TextColor="white"/>
                     <Label Text="- Arnold Schwarzenegger" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" FontAttributes="Italic"/>
             </Grid>
             </Border>
