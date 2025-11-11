@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Band_it.Views.App_settings"
              Style="{StaticResource Background_colors}">
+
     <ScrollView>
         <VerticalStackLayout>
         <Label 
@@ -13,7 +14,7 @@
         <Border />
         <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*,*" VerticalOptions="Center">
             <Label Text="Dark mode" Grid.Column="1" Grid.Row="0" Margin="10"/>
-            <Switch x:Name="dark_mode" Grid.Column="2" Grid.Row="0" IsToggled="False"/>
+            <Switch x:Name="dark_mode" Grid.Column="2" Grid.Row="0" IsToggled="False" Toggled="SwitchTheme_toggled"/>
             <Label Text="Light mode" Grid.Column="3" Grid.Row="0" Margin="10"/>
             <Label Text="Kgs" Grid.Column="1" Grid.Row="1" Margin="10"/>
             <Switch x:Name="kgs_lbs" Grid.Column="2" Grid.Row="1" IsToggled="False" />
@@ -35,36 +36,43 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <SwipeView>
                    
                                 <Grid RowDefinitions="1*" ColumnDefinitions="*,*,*,*,*">
 
-                                <Button x:Name="band_button"
-                                        Grid.Column="1"
-                                        Grid.ColumnSpan="3" 
-                                        BackgroundColor="{Binding Color}"
-                                        HeightRequest="50" 
-                                        CornerRadius="10" 
-                                        Margin="5" />
-                                <Label Grid.Column="1" 
-                                        Text="{Binding Color}" 
-                                        VerticalOptions="Center"
-                                        HorizontalOptions="Center"
-                                        TextColor="{StaticResource White}"
-                                />
-                                <Label Grid.Column="2" 
-                                       Text="{Binding Resistance}" 
-                                       VerticalOptions="Center"
-                                       TextColor="{StaticResource White}"
-                                />
-                                <Image Grid.Column="3" 
-                                       Source="next.png" 
-                                       MaximumHeightRequest="30" 
-                                       MaximumWidthRequest="30"
-                               />
-                                <Button Style="{StaticResource DeleteButton}" 
-                                        Clicked="bin_clicked" 
-                                        Grid.Column="4"/>
-                            </Grid>                          
+                                    <Button x:Name="band_button"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="5" 
+                                            BackgroundColor="{Binding Color}"
+                                            HeightRequest="50" 
+                                            CornerRadius="10" 
+                                            Margin="5" />
+                                    <Label Grid.Column="1" 
+                                            Text="{Binding Color}" 
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"
+                                            TextColor="{StaticResource White}"/>
+                                    <Label Grid.Column="2" 
+                                           Text="{Binding Resistance}" 
+                                           VerticalOptions="Center"
+                                           TextColor="{StaticResource White}"/>
+                                    <Image Grid.Column="3" 
+                                           Source="next.png" 
+                                           MaximumHeightRequest="30" 
+                                           MaximumWidthRequest="30"/>
+                                </Grid>
+                                <SwipeView.RightItems>
+                                        <SwipeItemView>
+                                            <Button 
+                                                ImageSource="bin.png"
+                                                Style="{StaticResource DeleteButton}" 
+                                                    Clicked="bin_clicked"
+                                                    
+                                                />
+                                    </SwipeItemView>
+                                </SwipeView.RightItems>
+                                
+                            </SwipeView>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

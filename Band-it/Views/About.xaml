@@ -5,8 +5,12 @@
              Style="{StaticResource Background_colors}">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="About this app"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Margin="20"/>
+        <Label
+            Text="COMING SOON!" VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>

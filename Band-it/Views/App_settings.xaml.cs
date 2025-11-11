@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using Band_it.Modules;
 using Band_it.Services;
+using Band_it.Themes;
 
 namespace Band_it.Views;
 
@@ -14,9 +15,9 @@ public partial class App_settings : ContentPage
         LoadBands();
     }
 
-    private async void defaultExerciseSettings_clicked(object sender, EventArgs e)
+    private void defaultExerciseSettings_clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new DefaultSets());
+        Navigation.PushAsync(new DefaultSets());
     }
 
     protected override void OnAppearing()
@@ -51,4 +52,16 @@ public partial class App_settings : ContentPage
         await Navigation.PushAsync(new Add_band());
     }
 
+    public void SwitchTheme_toggled(object sender, ToggledEventArgs e)
+    {
+        //Application.Current.Resources.MergedDictionaries.Clear();
+        //if (e.Value)
+        //{
+        //    Application.Current.Resources.MergedDictionaries.Add(new LightMode());
+        //}
+        //else
+        //{
+        //    Application.Current.Resources.MergedDictionaries.Add(new DarkMode())   ;
+        //}
+    }
 }

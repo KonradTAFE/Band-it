@@ -12,16 +12,20 @@ namespace Band_it.Services
     {
         public ObservableCollection<Set> GetDefault()
         {
+
             ObservableCollection<Set> sets = new ObservableCollection<Set>();
             int count = Preferences.Get("SetCount", 0);
-            for (int i= 0; i < count; i++)
-            {
-                int id = Preferences.Get($"Set_{i}_Id", 0);
-                int reps = Preferences.Get($"Set_{i}_Reps", 0);
-                string color = Preferences.Get($"Set{i}_Color", "");
-                if (reps != 0 && reps != 0)
+            if (count > 0) { 
+                for (int i= 0; i < count; i++)
                 {
-                    sets.Add(new Set(id, reps, color));
+
+                    int id = Preferences.Get($"Set_{i}_Id", 0);
+                    int reps = Preferences.Get($"Set_{i}_Reps", 0);
+                    string color = Preferences.Get($"Set{i}_Color", "");
+                    if (reps != 0 && reps != 0)
+                    {
+                        sets.Add(new Set(id, reps, color));
+                    }
                 }
             }
             return sets;
@@ -33,7 +37,7 @@ namespace Band_it.Services
             Preferences.Set("SetCount", sets.Count);
             for (int i = 0; i < sets.Count; i++)
             {
-                Preferences.Set($"Set_{i}_Id", sets[i].Color);
+                Preferences.Set($"Set_{i}_Id", sets[i].Id);
                 Preferences.Set($"Set_{i}_Reps", sets[i].Reps);
                 Preferences.Set($"Set_{i}_Color", sets[i].Color);
             }
@@ -43,7 +47,7 @@ namespace Band_it.Services
         {
             int index = Preferences.Get("SetCount", 0);
             Preferences.Set("SetCount", index + 1);
-            Preferences.Set($"Set_{index}_Id", color);
+            Preferences.Set($"Set_{index}_Id", id);
             Preferences.Set($"Set_{index}_Reps", reps);
             Preferences.Set($"Set_{index}_Color", color);
         }

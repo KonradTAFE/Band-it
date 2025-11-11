@@ -17,6 +17,7 @@ public partial class DefaultSets : ContentPage
 		InitializeComponent();
 		_sets = _preferences.GetDefault();
 		sets_list.ItemsSource = _sets;
+		
     }
 
     private void addSet_Clicked(object sender, EventArgs e)
