@@ -84,9 +84,18 @@
                 </SwipeView>
             </VerticalStackLayout>
         </ScrollView>
-        <VerticalStackLayout WidthRequest="300" HeightRequest="100">
+        <VerticalStackLayout WidthRequest="300" HeightRequest="300" VerticalOptions="Center">
             <Label HorizontalOptions="Center" Text="Current Workout" TextColor="{StaticResource White}"/>
             <Label HorizontalOptions="Center" Text="COMING SOON!" TextColor="{StaticResource White}"/>
+            <ListView x:Name="ExerciseSets">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Button Text="{Binding Reps}" BackgroundColor="{Binding Color}" WidthRequest="100"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Border/>
             <Label HorizontalOptions="Center" Text="Last Workout" TextColor="{StaticResource White}"/>
             <Label HorizontalOptions="Center" Text="COMING SOON!" TextColor="{StaticResource White}"/>

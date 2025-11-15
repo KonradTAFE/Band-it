@@ -10,7 +10,7 @@
             HorizontalOptions="Center" 
             FontSize="20"
             Margin="10"/>
-        <ListView x:Name="sets_list" >
+        <ListView x:Name="sets_list">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,7 +22,7 @@
                                 <Label Text="Reps" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center"/>
                                 <Label x:Name="repetitions" VerticalOptions="Center" Text="{Binding x:DataType='Stepper', Source={x:Reference _stepper}, Path=Value}" Grid.Column="3" HorizontalOptions="Center"/>
                                 <Stepper x:Name="_stepper" Increment="1" Value="{Binding Reps}" Minimum="0" WidthRequest="100" Grid.Column="4"/>
-                                <Picker x:Name="band_picker" Grid.Column="6"/>
+                                <Picker x:Name="band_picker" ClassId="{Binding Id, StringFormat='picker_{0}'}" Grid.Column="6" ItemsSource="{Binding colors}"/>
                             </Grid>
                         </Border>
                     </ViewCell>

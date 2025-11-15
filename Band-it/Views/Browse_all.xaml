@@ -8,7 +8,7 @@
         <StackLayout>
         <Picker x:Name="MusclePicker" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource Black}"  SelectedItem="all" SelectedIndexChanged="MusclePicker_SelectedIndexChanged"></Picker>
         <SearchBar x:Name="Searchbar" Placeholder="Search by name..." TextColor="{StaticResource Black}" Text="" BackgroundColor="{StaticResource Secondary}" SearchButtonPressed="SearchBar_SearchButtonPressed"></SearchBar>
-        <Label x:Name="NoInternetLabel" BackgroundColor="{StaticResource Tertiary}" Text="Check internet connection!" IsVisible="False" HorizontalOptions="Center" />
+        <Label x:Name="NoInternetLabel" BackgroundColor="{StaticResource Tertiary}" Text="Check internet connection!" IsVisible="False" HorizontalTextAlignment="Center" />
         <ListView x:Name="All_exercises">
             <ListView.ItemTemplate>
                     <DataTemplate>

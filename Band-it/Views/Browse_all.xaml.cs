@@ -17,7 +17,7 @@ public partial class Browse_all : ContentPage
     protected override async void OnAppearing()
     {
         Searchbar.Text = "";
-        List<string> muscles = new List<string>();
+        List<string> muscles = new List<string>() { "all" };
         List<Exercise> exercises = await _service.GetAllExercises();
         All_exercises.ItemsSource = null;
 
@@ -33,7 +33,6 @@ public partial class Browse_all : ContentPage
 
         All_exercises.ItemsSource = exercises;
 
-        muscles.Add("all");
         foreach(Exercise exercise in All_exercises.ItemsSource)
         {
             if (muscles.Contains(exercise.PrimaryMuscle[0])){
