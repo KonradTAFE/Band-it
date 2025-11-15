@@ -16,14 +16,12 @@
             <Label Text="Dark mode" Grid.Column="1" Grid.Row="0" Margin="10"/>
             <Switch x:Name="dark_mode" Grid.Column="2" Grid.Row="0" IsToggled="False" Toggled="SwitchTheme_toggled"/>
             <Label Text="Light mode" Grid.Column="3" Grid.Row="0" Margin="10"/>
-            <Label Text="Kgs" Grid.Column="1" Grid.Row="1" Margin="10"/>
-            <Switch x:Name="kgs_lbs" Grid.Column="2" Grid.Row="1" IsToggled="False" />
-            <Label Text="Lbs" Grid.Column="3" Grid.Row="1" Margin="10"/>
             <Button x:Name="defaultExerciseSettings" 
-                    Style="{StaticResource greyButtons}"
-                    Text="Default exercise settings" 
-                    Clicked="defaultExerciseSettings_clicked"
-                    Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
+                Style="{StaticResource greyButtons}"
+                    TextColor="White"
+                Text="Default exercise settings" 
+                Clicked="defaultExerciseSettings_clicked"
+                Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
         </Grid>
         <Border Margin="5"/>
         <Label 

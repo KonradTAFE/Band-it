@@ -18,8 +18,21 @@ public partial class Browse_all : ContentPage
     {
         Searchbar.Text = "";
         List<string> muscles = new List<string>();
+        List<Exercise> exercises = await _service.GetAllExercises();
         All_exercises.ItemsSource = null;
-        All_exercises.ItemsSource = await _service.GetAllExercises();
+
+        if(exercises.Count == 0)
+        {
+            NoInternetLabel.IsVisible = true;
+        }
+        else
+        {
+            NoInternetLabel.IsVisible = false;
+
+        }
+
+        All_exercises.ItemsSource = exercises;
+
         muscles.Add("all");
         foreach(Exercise exercise in All_exercises.ItemsSource)
         {

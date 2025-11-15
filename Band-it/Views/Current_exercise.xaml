@@ -67,16 +67,16 @@
 
     <StackLayout Orientation="Vertical" Style="{StaticResource StackStyle}">
         <ScrollView>
-            <VerticalStackLayout WidthRequest="400">
+            <VerticalStackLayout WidthRequest="300">
                 <Label x:Name="ExerciseName" HorizontalOptions="Center" FontAttributes="Bold" Text="{Binding ExerciseName}" FontSize="30" Margin="10"/>
                 <Label Text="{Binding PrimaryMuscle[0]}" HorizontalOptions="Center" TextColor="{StaticResource White}"/>
-                <SwipeView Threshold="350" HeightRequest="350">
+                <SwipeView Threshold="300" HeightRequest="350">
 
                     <Image x:Name="Gif" Source="{Binding Gif}" MaximumHeightRequest="300" MaximumWidthRequest="300"></Image>
                     <SwipeView.RightItems>
                         <SwipeItemView>
                             <ScrollView>
-                            <Label x:Name="Description" HorizontalOptions="Center" TextColor="{StaticResource White}" WidthRequest="350" />
+                            <Label x:Name="Description" HorizontalOptions="Center" TextColor="{StaticResource White}" WidthRequest="300" FontSize="15" />
                             </ScrollView>
                         </SwipeItemView>
                     </SwipeView.RightItems>

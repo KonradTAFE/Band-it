@@ -61,7 +61,7 @@ public partial class App_settings : ContentPage
         //}
         //else
         //{
-        //    Application.Current.Resources.MergedDictionaries.Add(new DarkMode())   ;
+        //    Application.Current.Resources.MergedDictionaries.Add(new DarkMode());
         //}
     }
 }

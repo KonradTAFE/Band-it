@@ -13,7 +13,7 @@
         <Setter Property="Background">
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                 <GradientStop Color="{StaticResource Primary}" Offset="0.0" />
-                <GradientStop Color="{StaticResource Black}" Offset="1.0" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black},Default={StaticResource Black}}" Offset="1.0" />
             </LinearGradientBrush>
         </Setter>
     </Style>
@@ -45,13 +45,12 @@
         <Setter Property ="Margin" Value="10"/>
         <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"/>
         <Setter Property="LineBreakMode" Value="WordWrap" />
-        <Setter Property="BorderColor" Value="{StaticResource Black}"/>
-        <Setter Property="BorderWidth" Value="1"/>
         <Setter Property="TextColor" Value="{StaticResource Black}"/>
         <Setter Property="FontFamily" Value="Arial"/>
         <Setter Property="MinimumWidthRequest" Value="150"/>
         <Setter Property="MinimumHeightRequest" Value="150"/>
-        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="FontSize" Value="Large"/>
+        <Setter Property="CornerRadius" Value="60"/>
     </Style>
 
     <Style TargetType="ActivityIndicator">

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Band_it.Modules;
 using Newtonsoft.Json.Linq;
+using System.Linq.Expressions;
 
 
 namespace Band_it.Services
@@ -20,13 +21,27 @@ namespace Band_it.Services
             // building request
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new(HttpMethod.Get, baseURL);
+            HttpResponseMessage httpResponse = new HttpResponseMessage();
 
             // sending the request
-            HttpResponseMessage httpResponse = await httpClient.SendAsync(request);
+            try
+            {
+                httpResponse = await httpClient.SendAsync(request);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Check internet connection");
+                return exerciseList;
+            }
+
+            
+        
 
             if (!httpResponse.IsSuccessStatusCode)
             {
-                //TODO: Add exception 
+                Console.WriteLine($"API error: {httpResponse.ToString()}");
+                return exerciseList;
             }
             ;
 
@@ -34,12 +49,6 @@ namespace Band_it.Services
             string responseString = await httpResponse.Content.ReadAsStringAsync();
             // get json string as C# object
             APISymbolResponse? symbolResponse = JsonConvert.DeserializeObject<APISymbolResponse>(responseString);
-
-
-            if (symbolResponse == null)
-            {
-                //TODO: Add exception 
-            }
 ;
             return symbolResponse.data.ToList();
         }
@@ -47,24 +56,10 @@ namespace Band_it.Services
         public async Task<List<Exercise>> SearchByName(string name)
         {
             exerciseList.Clear();
-            HttpClient httpClient = new HttpClient();
-            HttpRequestMessage request = new(HttpMethod.Get, baseURL);
+            List<Exercise> symbolResponse = await GetAllExercises();
 
-            // sending the request
-            HttpResponseMessage httpResponse = await httpClient.SendAsync(request);
 
-            if (!httpResponse.IsSuccessStatusCode)
-            {
-                //TODO: Add exception 
-            }
-            ;
-
-            //get body response as string (Content)
-            string responseString = await httpResponse.Content.ReadAsStringAsync();
-            // get json string as C# object
-            APISymbolResponse? symbolResponse = JsonConvert.DeserializeObject<APISymbolResponse>(responseString);
-            
-            foreach (Exercise exercise in symbolResponse.data)
+            foreach (Exercise exercise in symbolResponse)
             {
                 if (exercise.ExerciseName.Contains(name))
                 {
@@ -77,24 +72,9 @@ namespace Band_it.Services
         public async Task<List<Exercise>> SearchByMuscle(string muscle)
         {
             exerciseList.Clear();
-            HttpClient httpClient = new HttpClient();
-            HttpRequestMessage request = new(HttpMethod.Get, baseURL);
+            List<Exercise> symbolResponse = await GetAllExercises();
 
-            // sending the request
-            HttpResponseMessage httpResponse = await httpClient.SendAsync(request);
-
-            if (!httpResponse.IsSuccessStatusCode)
-            {
-                //TODO: Add exception 
-            }
-            ;
-
-            //get body response as string (Content)
-            string responseString = await httpResponse.Content.ReadAsStringAsync();
-            // get json string as C# object
-            APISymbolResponse? symbolResponse = JsonConvert.DeserializeObject<APISymbolResponse>(responseString);
-            
-            foreach (Exercise exercise in symbolResponse.data)
+            foreach (Exercise exercise in symbolResponse)
             {
                 if (exercise.PrimaryMuscle.Contains(muscle))
                 {
