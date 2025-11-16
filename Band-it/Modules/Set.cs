@@ -12,28 +12,14 @@ namespace Band_it.Modules
     {
         public int Id { get; set; }
         public int Reps {  get; set; }
-        public string Color { get; set; }
-        public List<string> colors { get; set; }
-
-        public List<string> ActiveColors()
-        {
-            BandPreferences bands = new BandPreferences();
-            List<string> colors = new List<string>();
-            ObservableCollection<Band> AllBands = bands.GetBands();
-            foreach (Band band in AllBands)
-            {
-                colors.Add(band.Color);
-            }
-            return colors;
-        }
+        public string BandColor { get; set; }        
 
         public Set() { }
         public Set(int id, int reps, string color)
         {
             Id = id;
             Reps = reps;
-            Color = color;
-            colors = ActiveColors();
+            BandColor = color;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Band_it.Services
 
                     int id = Preferences.Get($"Set_{i}_Id", 0);
                     int reps = Preferences.Get($"Set_{i}_Reps", 0);
-                    string color = Preferences.Get($"Set{i}_Color", "");
+                    string color = Preferences.Get($"Set_{i}_Color", "");
                     if (reps != 0 && reps != 0)
                     {
                         sets.Add(new Set(id, reps, color));
@@ -39,7 +39,7 @@ namespace Band_it.Services
             {
                 Preferences.Set($"Set_{i}_Id", sets[i].Id);
                 Preferences.Set($"Set_{i}_Reps", sets[i].Reps);
-                Preferences.Set($"Set_{i}_Color", sets[i].Color);
+                Preferences.Set($"Set_{i}_Color", sets[i].BandColor);
             }
         }
 

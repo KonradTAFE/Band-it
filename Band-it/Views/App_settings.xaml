@@ -11,19 +11,41 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             Margin="10"/>
-        <Border />
+        <Border Margin="5" />
         <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*,*" VerticalOptions="Center">
             <Label Text="Dark mode" Grid.Column="1" Grid.Row="0" Margin="10"/>
             <Switch x:Name="dark_mode" Grid.Column="2" Grid.Row="0" IsToggled="False" Toggled="SwitchTheme_toggled"/>
             <Label Text="Light mode" Grid.Column="3" Grid.Row="0" Margin="10"/>
-            <Button x:Name="defaultExerciseSettings" 
-                Style="{StaticResource greyButtons}"
-                    TextColor="White"
-                Text="Default exercise settings" 
-                Clicked="defaultExerciseSettings_clicked"
-                Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
         </Grid>
-        <Border Margin="5"/>
+            <Border Margin="5"/>
+            <Label 
+                Text="Default sets settings"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Margin="10"/>   
+            <ListView x:Name="default_sets">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*,*,*,*" WidthRequest="300">
+                                <Button BackgroundColor="{Binding BandColor}" 
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="4"/>
+                                <Label Text="Set " Grid.Column="0" HorizontalOptions="End" VerticalOptions="Center"/>
+                                <Label Text="{Binding Id}" Grid.Column="1" VerticalOptions="Center"/>
+                                <Label Text="Reps: " Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center"/>
+                                <Label Text="{Binding Reps}" Grid.Column="3" VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+                <Button Style="{StaticResource greyButtons}" x:Name="add_sets" Margin="10" Clicked="addSet_Clicked" Text="+" WidthRequest="40"></Button>
+                
+                <Button Style="{StaticResource DeleteButton}" Clicked="setBin_clicked" Margin="10"/>
+            </HorizontalStackLayout>
+            <Border Margin="5"/>
         <Label 
             Text="Bands settings"
             VerticalOptions="Center" 

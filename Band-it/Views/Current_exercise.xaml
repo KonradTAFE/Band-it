@@ -85,18 +85,21 @@
             </VerticalStackLayout>
         </ScrollView>
         <VerticalStackLayout WidthRequest="300" HeightRequest="300" VerticalOptions="Center">
-            <Label HorizontalOptions="Center" Text="Current Workout" TextColor="{StaticResource White}"/>
-            <Label HorizontalOptions="Center" Text="COMING SOON!" TextColor="{StaticResource White}"/>
-            <ListView x:Name="ExerciseSets">
-                <ListView.ItemTemplate>
+            <Label HorizontalOptions="Center" Text="Current Workout" TextColor="{StaticResource White}" Margin="5"/>
+            <Label HorizontalOptions="Center" Text="FULL FUNCTIONALITY COMING SOON" TextColor="{StaticResource White}" Margin="5"/>
+            <CollectionView x:Name="ExerciseSets" >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <Button Text="{Binding Reps}" BackgroundColor="{Binding Color}" WidthRequest="100"/>
-                        </ViewCell>
+                        <StackLayout >
+                            <Button Text="{Binding Reps}" TextColor="White" BackgroundColor="{Binding BandColor}" WidthRequest="50" HorizontalOptions="Center"/>
+                        </StackLayout>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Border/>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Border Margin="5"/>
             <Label HorizontalOptions="Center" Text="Last Workout" TextColor="{StaticResource White}"/>
             <Label HorizontalOptions="Center" Text="COMING SOON!" TextColor="{StaticResource White}"/>
         </VerticalStackLayout>

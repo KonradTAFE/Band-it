@@ -15,29 +15,34 @@ public partial class DefaultSets : ContentPage
 	{
 		InitializeComponent();
 		_sets = _preferences.GetDefault();
-		sets_list.ItemsSource = _sets;
-        
+        setId.Text = (_sets.Count + 1).ToString();
+        band_picker.ItemsSource = ActiveColors();
+        band_picker.SelectedIndex = 0;
     }
 
-    private void addSet_Clicked(object sender, EventArgs e)
-    {
-		int index = _sets.Count + 1;
-		_sets.Add(new Set(index, 1, ""));
-    }
+
 
     private void save_defaults_Clicked(object sender, EventArgs e)
     {
-		_preferences.SaveDefaults(_sets);
-		Shell.Current.GoToAsync("//settings");
+		int id = int.Parse(setId.Text);
+		int reps = int.Parse(repetitions.Text);
+		string color = band_picker.SelectedItem.ToString();
+		_sets.Add(new Set(id, reps, color));
+        _preferences.SaveDefaults(_sets);
+        Shell.Current.GoToAsync("//settings");
+		
     }
 
-    private void bin_clicked(object sender, EventArgs e)
+    public List<string> ActiveColors()
     {
-		if (_sets.Count > 0)
-		{
-			_sets.Remove(_sets.Last());
-			_preferences.SaveDefaults(_sets);
-		}
+        BandPreferences bands = new BandPreferences();
+        List<string> colors = new List<string>();
+        ObservableCollection<Band> AllBands = bands.GetBands();
+        foreach (Band band in AllBands)
+        {
+            colors.Add(band.Color);
+        }
+        return colors;
     }
 
 }
